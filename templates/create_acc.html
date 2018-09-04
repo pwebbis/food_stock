@@ -1,0 +1,21 @@
+{%extends "layout.html"%}
+{%block heading %}
+Did you want more??!
+
+{% endblock %}
+
+{%block body%}
+<div class=main_div>
+    <form class="center_form" action="{{url_for('process_data')}}" method="post">
+
+      <input type="text" name="new_user" placeholder="enter a username">
+      <p class="p_error" style="visibility:"{{user_status}}""></p>
+
+      <input type="password" name="password_reg" placeholder="choose you password">
+
+    <button>Submit!</button>
+
+  </form>
+</div>
+
+{% endblock %}
